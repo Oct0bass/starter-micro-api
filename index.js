@@ -4,7 +4,7 @@ http.createServer(function (req, res) {
     if (req.path == "env") {
         res.write(JSON.stringify(process.env));
     } else if (req.path.startsWith("env/")) {
-        res.write(process.env[req.path.slice(3));
+        res.write(process.env[req.path.slice(3)]);
     } else {
         res.write('Yo!');
     }
